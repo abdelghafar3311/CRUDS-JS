@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0; 
+}
+body{
+    background-color: #f8f9fa;
+    color: #343a40;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* direction: rtl; */
+}
+.crud{
+    width: 80%;
+    margin: auto;
+}
+.head{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+input{
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: 0;
+    background-color: #eee;
+    border-top: 2px solid #ddd;
+    margin: 4px 0;
+    border-radius: 4px;
+    padding: 4px;
+    color: #343a40;
+    transition: 0.3s;
+}
+input:focus{
+    background-color: rgb(223, 228, 231);
+    transform: scale(1.1);
+}
+
+.price input{
+    width: 20%;
+}
+
+#total{
+    background-color: #007bff;
+    padding: 5px 2px;
+    border-radius: 4px;
+    color: #f8f9fa;
+}
+#total::before{
+    content: 'Total: ';
+    font-weight: 700;
+    color: #f8f9fa;
+}
+
+button{
+    width: 100%;
+    height: 30px;
+    border: 0;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+button:hover{
+    background-color: #016cdf;
+    letter-spacing: 1px;
+}
+
+.btnSearch{
+    display: flex;
+    justify-content: space-between;
+
+}
+.btnSearch button{
+    width: 45%;
+}
+
+#deleteAll{
+    margin: 20px 0;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    overflow: hidden;
+  
+}
+table th{
+    text-transform: uppercase;
+    /* white-space: nowrap; */
+}
+th,td{
+    padding: 5px;
+}
+
+table .Main{
+    background-color: #343a40;
+    color: #f8f9fa;
+}
+
+
+tr:hover{
+    background-color: rgb(209, 214, 219);
+}
+
+table .Main:hover{
+    background-color: #343a40;
+}
+
+.color{
+    background-color: #eee;
+}
+
+.message-content{
+    position: fixed;
+    top: 5px;
+    right: 15px;
+    width: 360px;
+    /* min-height: 360px; */
+    background-color: transparent;
+}
+
+.message-content li{
+    border: 1px solid #ddd;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    margin: 15px 0;
+    z-index: 20;
+    background-color: #007bff;
+    color: #fff;
+}
+
+
+
+.close{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close span{
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border-radius: .254rem;
+    cursor: pointer;
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    position: relative;
+}
+
+.close span::before{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 24px;
+    background-color: #343a40;
+    transform: rotate(45deg);
+    border-radius: .254rem;
+}
+
+.close span::after{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 24px;
+    background-color: #343a40;
+    transform: rotate(-45deg);
+    border-radius: .254rem;
+}
+
+.close span:active,
+.close span:focus{
+    box-shadow: 0 0 0 .25rem #007bff6e;
+}
+
+.message-content li .cont .text{
+    font-size: 15px;
+    font-weight: 600;
+    font-style: italic;
+}
+.message-content li .cont .time{
+    font-size: 10px;
+    color: #cccbcb;
+    font-style: italic;
+}
+
+.message-content li.eff{
+    animation: effect .8s linear;
+}
+
+@keyframes effect {
+    0%{
+        opacity: 0;
+        transform: translateX(120px);
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.message-content li.Ceff{
+    animation: Ceffect .8s linear;
+}
+
+@keyframes Ceffect {
+    0%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(120px);
+        opacity: 0;
+    }
+}
+
+/* start local size style */
+
+/* local size container */
+
+.local-cont{
+    position: fixed;
+    z-index: 200;
+    top: 15px;
+    left: 20px;
+    padding: 10px;
+    background: #016cdf;
+    color: #fff;
+    font-weight: 900;
+}
+
+/* end local size style */
+
+.warning{
+    color: #fbff00;
+    font-family: monospace;
+    font-weight: 100;
+    font-size: 10px;
+}
+
+.alert{
+    color: #ff4800;
+    font-family: monospace;
+    font-weight: 100;
+    font-size: 10px;
+}

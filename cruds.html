@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- styles -->
+    <link rel="stylesheet" href="cruds.css">
+    <title>CRUDS</title>
+</head>
+<body>
+    <div class="crud">
+        <!-- header -->
+        <div class="head">
+            <h2>Business System</h2>
+            <p>Mange System For Manager</p>
+        </div>
+        <!-- inputs -->
+        <div class="inputs">
+            <!-- title -->
+            <input type="text" id="title" placeholder="Name Product">
+            <div class="price">
+                <!-- price -->
+                <input type="number" name="" id="price" placeholder="Price product">
+                <!-- taxes -->
+                <input type="number" name="" id="taxes" placeholder="Taxes">
+                <!-- ads -->
+                <input type="number" name="" id="ads" placeholder="Ads">
+                <!-- discount -->
+                <input type="number" name="" id="discount" placeholder="Discount">
+                <!-- total -->
+                <small id="total"></small>
+            </div>
+            <!-- count -->
+            <input type="number" placeholder="Count This Product" id="count">
+            <!-- category -->
+            <input type="text" placeholder="Category Product" id="category">
+            <!-- btn create -->
+            <button id="submit">Create</button>
+        </div>
+        <!-- outputs -->
+        <div class="outputs">
+            <div class="searchBlock">
+                <!-- search input -->
+                <input type="search" placeholder="Search About Product Name" id="search" onkeyup="Search(this.value)">
+                <div class="btnSearch">
+                    <!-- btn search name -->
+                    <button id="searchTiltle">Search About Product Name</button>
+                    <!-- btn search category -->
+                    <button id="searchCategory">Search About Product Category</button>
+                </div>
+            </div>
+        </div>
+        <!-- table -->
+        <div id="deleteAll"></div>
+        <table>
+            <tr class="Main">
+                <th>Index</th>
+                <th>PRODUCT Name</th>
+                <th>PRODUCT Category</th>
+                <th>Count</th>
+                <th>Price Once</th>
+                <th>All Price</th>
+                <th>Change</th>
+                <th>Delete</th>
+                <th>Delete One</th>
+            </tr>
+            <!-- this output -->
+            <tbody id="tbody"></tbody>
+            
+        </table>
+    </div>
+
+    <!-- this massage -->
+    <ul class="message-content">
+    </ul>
+
+    <!-- local size -->
+    
+    <div class="local-cont" title="reload to know the size" id="localSizeContainer"> <!-- container for local size -->
+        <!-- span have size -->
+        <span class="local-size" id="localsize">size local is: 0.2545KB</span>
+    </div>
+    <script src="server.js"></script>
+    
+</body>
+</html>
